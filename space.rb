@@ -1,10 +1,13 @@
 class Space
-    attr_reader :description, :exits, :related_rooms, :items
-    def initialize(description, exits, items)
+    attr_reader :description, :exits, :related_rooms, :items, :actions,  :necessary_item
+   
+    def initialize(description, exits, items, actions, necessary_item)
         @description = description
         @exits = exits
         @related_rooms = {}
         @items = items
+        @actions = actions
+        @necessary_item = necessary_item
     end
 
     def add_related_rooms(related_rooms)
